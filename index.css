@@ -1,0 +1,51 @@
+
+body{
+    direction: rtl;
+    background-color: antiquewhite;
+    background-image: url(מצגת1.jpg);
+     background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    display: block; 
+    display: auto; 
+    background-repeat: no-repeat; 
+}
+.container-detailes{
+text-align: center;
+border: solid 1px;
+margin-left: 35%;
+margin-right: 35%;
+margin-top: 5%;
+background-color: white;
+
+
+}
+
+h1{
+    text-align: center;
+    font-size: 1000%;
+}
+input{
+    margin-top: 5%;
+    margin-bottom: 5%;    
+        width: 300px; /* גודל רוחב */
+        height: 50px; /* גובה */
+        font-size: 20px; /* גודל גופן */
+        padding: 10px; /* ריפוד פנימי */
+        border: 2px solid #ccc; /* גבול */
+        border-radius: 5px; /* פינות מעוגלות */
+}
+.container-detailes label{
+    font-size: 30px;
+}
+button{
+    margin-bottom: 10%;   
+    margin-right: 5%; 
+    width: 250px; /* גודל רוחב */
+        height: 50px; /* גובה */
+        font-size: 20px; /* גודל גופן */
+        padding: 10px; /* ריפוד פנימי */
+        border: 2px solid #ccc; /* גבול */
+        border-radius:15px; /* פינות מעוגלות */
+}

@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1920x1080'); /* הכנס כאן את כתובת התמונה שלך */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#image-container {
+    cursor: pointer;
+    position: absolute; /* מאפשר למקם את התמונה במדויק */
+    top: 50%; /* ממקם את התמונה באמצע הדף מלמעלה */
+    left: 50%; /* ממקם את התמונה באמצע הדף מצד שמאל */
+    transform: translate(-50%, -50%); /* מתקן את המיקום כך שהתמונה תהיה במרכז */
+    z-index: 1; /* הופך את התמונה לעליון על התמונה הקודמת */   
+}
+#cardsContainer {
+    position: absolute;
+    transform: translate(8%, -119%);
+
+}
+img {
+    width: 71vh;
+    height: 80vh;
+   
+}
+
+#button,#buttonL,#buttonR, #questions {
+    position: absolute;
+    left: 37.4%;
+    color: beige;
+    font-size: 161%;
+    bottom: 9%;
+}
+ #questions{
+    top: 84%;
+    left: 47%;
+    z-index: 1000;
+    direction: rtl; 
+    text-align: right; /* למרכז את הטקסט בצד ימין */ 
+}
+#button{
+    z-index: 1000;
+     width: 53vh;
+     height: 10vh; 
+   
+
+}
+.card {
+   
+    width: 16%;
+    height: 21%;
+    margin-left: 3vh;
+}
+
+#buttonL{
+    z-index: 1000;
+    width: 5%;
+    height:10%;
+    margin-left: -7vh
+}
+#buttonR
+{
+    z-index: 1000;
+    width: 5%;
+    height:10%;
+    margin-left: 50vh;
+}
+#no
+{
+
+    font-family: 'Fb Extaza';
+    color: #426DFB;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw #2356FF;
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+}
+#yes
+{
+
+    font-family: 'Fb Extaza';
+    color: #FB4264;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw #F40A35;
+    position: absolute;
+    top: 50vh;
+    right: 5vw;
+}
+
+#yes.active {
+    animation: yes 1s ease infinite;
+    -moz-animation: yes 1s ease infinite;
+    -webkit-animation: yes 1s ease infinite;
+}
+
+@keyframes yes {
+    0%, 100% {
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+        color: #FED128;
+    }
+
+    50% {
+        text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+        color: #806914;
+    }
+}
+
+#no.active {
+    animation: no 2s linear infinite;
+    -moz-animation: no 2s linear infinite;
+    -webkit-animation: no 2s linear infinite;
+    -o-animation: no 2s linear infinite;
+}
+
+@keyframes no {
+    0%, 100% {
+        text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+        color: #28D7FE;
+    }
+
+    50% {
+        text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+        color: #146C80;
+    }
+}
+
+
+#choose{
+    width: 15vw;
+    height: 30vh;
+    display: inline-block;
+    position: absolute;
+    top: 0vh;
+    right:0vh;
+}
+#cardQ{
+    position: absolute;
+    top: 13vh;
+    width: 6vw;
+    height: 14vh;
+    right: 4.7vw;
+}
+
+
+#win {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 2000;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    background-color: #1a1b1cd9;
+}
+
+#clock {
+    position: absolute;
+    margin-top: 5.8vh;
+    right: 82vw;
+    top: -2vh;
+    color: #001ebd;
+    z-index: 10;
+    font-size: 67px;
+    font-family: 'Fb Extaza';
+}
+
+#notwin {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 2000;
+    position: absolute;
+    background-color: #1a1b1cd9;
+    font-size: 1000%;
+    color: #ffffff;
+    text-align: center;
+    /* margin-top: 30%; */
+    text-align: center;
+    text-transform: capitalize;
+}
+   
+
+
+  /* עיצוב לצד שניפתח */
+   .sidebar ,.sidebar2{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #11111185;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;      
+        }     
+       /* עיצוב לאיקס */
+        .sidebar a , .sidebar2 a{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+       /* צבע לאיקס שסוגר */
+        .sidebar a:hover, .sidebar2 a:hover {
+            color: #eb1111;
+        }
+
+
+
+        
+        /* עיצוב להגדרות שבצד */
+        .open-btn {
+                cursor: pointer;
+                 position: absolute;
+    top: 11%;
+    left: 0px;
+    width: 14vh;
+    height: 14vh;
+        }
+        .medlya {
+            cursor: pointer;
+            position: absolute;
+            top: 22%;
+            left: 0px;
+            width: 14vh;
+            height: 14vh;
+        }
+
+        #home {
+            width: 14vh;
+            height: 14vh;
+        }
+        .playAgain
+        {
+
+            cursor: pointer;
+            position: absolute;
+             top: 33%;
+           left: 0px;
+         width: 14vh;
+       height: 14vh;
+
+        }
+
+       
+
+
+            #backImg {
+                border: solid 1px;
+                border-radius: 21px;
+                width: 140px;
+                height: 74px;
+                margin-left: 15%;
+            }
+       #labalButtonMusic{
+        margin-top: 10%;
+       }
+       #again
+       {
+      
+        width: 15%;
+        height: 32%;
+        margin-top: -73%;
+    }
+     #againWin
+    {
+   
+        width: 14%;
+        height: 32%;
+        margin-top: -9%;
+        margin-left: 41%;
+    }
+     
+    #pwow{
+        font-size: 850%;
+        color: white;
+        /* margin-left: 30%; */
+        text-align: center;
+
+    }

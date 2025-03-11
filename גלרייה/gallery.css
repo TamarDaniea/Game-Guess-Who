@@ -1,0 +1,30 @@
+body{
+    direction: rtl;
+    background-image: url(/רקע2.png);
+     background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    display: block; 
+    display: auto; 
+    background-repeat: no-repeat; 
+    text-align: center;
+    
+}
+#div_container{
+font-size: 700%;
+margin-top: 5%;
+}
+.icon_container{
+margin-top: 15%;
+}
+.tooltip {
+    display: none; 
+    position: absolute;
+    background-color: black; 
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 10; 
+}
